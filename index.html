@@ -4,10 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f6ca32">
-  <meta name="description" content="Read webpages in Aurebesh with Holonet, a private Safari extension for iPhone and iPad.">
+  <meta name="description" content="Read webpages in Aurebesh with Holonet, a private Safari extension for iPhone, iPad, and Mac.">
   <title>Holonet — Aurebesh for Safari</title>
   <link rel="icon" href="assets/holonet-icon.png" type="image/png">
   <link rel="stylesheet" href="style.css">
+  <script src="setup-toggle.js" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -18,10 +19,15 @@
   <main>
     <section class="hero">
       <div class="hero-copy">
-        <p class="eyebrow">A small Safari extension for iPhone and iPad</p>
+        <p class="eyebrow">A small Safari extension for iPhone, iPad, and Mac</p>
         <h1>See the web<br>in a new script.</h1>
         <p class="lede">Holonet changes the typeface on webpages in Safari to Aurebesh. Turn it on when you want a different way to read, and switch back whenever you like.</p>
-        <a class="button" href="#how-it-works">See how to get started <span aria-hidden="true">↓</span></a>
+        <div class="hero-actions">
+          <a class="app-store-badge" href="https://apps.apple.com/gb/app/holonet/id6816645039" aria-label="Download Holonet on the App Store">
+            <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-gb?size=250x83" alt="Download on the App Store">
+          </a>
+          <a class="setup-link" href="#how-it-works">See how to get started <span aria-hidden="true">↓</span></a>
+        </div>
       </div>
       <div class="hero-art" aria-label="Holonet app icon artwork" role="img"><img src="assets/holonet-icon.png" alt=""></div>
     </section>
@@ -29,17 +35,35 @@
     <section class="intro section-wrap" id="how-it-works">
       <p class="eyebrow">Made for Safari</p>
       <h2>Your pages, in Aurebesh.</h2>
-      <p>Holonet is a Safari Web Extension inside a lightweight iPhone and iPad app. It changes how page text looks using fonts bundled with the app; it does not rewrite the page’s words.</p>
+      <p>Holonet is a Safari Web Extension inside a lightweight app for iPhone, iPad, and Mac. It changes how page text looks using fonts bundled with the app; it does not rewrite the page’s words.</p>
     </section>
 
     <section class="steps section-wrap" aria-labelledby="setup-heading">
       <div class="section-heading"><p class="eyebrow">A quick setup</p><h2 id="setup-heading">Enable Holonet in Safari.</h2></div>
-      <ol class="step-grid">
-        <li><span class="step-number">01</span><h3>Open Safari settings</h3><p>In Settings, choose Safari. On newer iOS versions, find Safari under Apps.</p></li>
-        <li><span class="step-number">02</span><h3>Turn on the extension</h3><p>Choose Extensions, select Holonet, and turn on Allow Extension.</p></li>
-        <li><span class="step-number">03</span><h3>Choose website access</h3><p>Allow access on the websites where you want Holonet to change the font. Safari lets you choose or change access at any time.</p></li>
-        <li><span class="step-number">04</span><h3>Pick a reading mode</h3><p>In Safari, open the Page menu and choose Holonet. Turn it on and choose a font mode.</p></li>
-      </ol>
+      <div class="platform-toggle" role="group" aria-label="Choose setup platform">
+        <button type="button" data-setup-platform="ios" aria-pressed="true">iOS</button>
+        <button type="button" data-setup-platform="macos" aria-pressed="false">macOS</button>
+      </div>
+      <div class="setup-platforms">
+        <section class="platform-setup" data-setup-panel="ios" aria-labelledby="mobile-setup-heading">
+          <h3 id="mobile-setup-heading">iPhone and iPad</h3>
+          <ol class="step-grid">
+            <li><span class="step-number">01</span><h4>Open Safari settings</h4><p>In Settings, choose Safari. On newer versions, find Safari under Apps.</p></li>
+            <li><span class="step-number">02</span><h4>Turn on the extension</h4><p>Choose Extensions, select Holonet, and turn on Allow Extension.</p></li>
+            <li><span class="step-number">03</span><h4>Choose website access</h4><p>Allow access on the websites where you want Holonet to change the font.</p></li>
+            <li><span class="step-number">04</span><h4>Pick a reading mode</h4><p>In Safari, open the Page menu, choose Holonet, and select a font mode.</p></li>
+          </ol>
+        </section>
+        <section class="platform-setup" data-setup-panel="macos" aria-labelledby="mac-setup-heading" hidden>
+          <h3 id="mac-setup-heading">Mac</h3>
+          <ol class="step-grid">
+            <li><span class="step-number">01</span><h4>Open Safari settings</h4><p>In Safari, choose Safari &gt; Settings from the menu bar.</p></li>
+            <li><span class="step-number">02</span><h4>Turn on the extension</h4><p>Select Extensions, choose Holonet, and enable it.</p></li>
+            <li><span class="step-number">03</span><h4>Choose website access</h4><p>Use the Holonet toolbar button to allow access to the websites you choose.</p></li>
+            <li><span class="step-number">04</span><h4>Pick a reading mode</h4><p>Select the toolbar button, turn Holonet on, and choose a font mode.</p></li>
+          </ol>
+        </section>
+      </div>
     </section>
 
     <section class="modes section-wrap">
@@ -55,7 +79,7 @@
   </main>
 
   <footer class="site-footer">
-    <p class="disclaimer">Holonet is an independent, unofficial app and is not affiliated with or endorsed by Lucasfilm, Disney, or their affiliates.</p>
+    <p class="disclaimer">Holonet is an independent, unofficial app and is not affiliated with or endorsed by Lucasfilm, Disney, or their affiliates. Apple, the Apple logo, iPhone, iPad, and Mac are trademarks of Apple Inc., registered in the U.S. and other countries and regions. App Store is a service mark of Apple Inc.</p>
     <div><span>© 2026 Holonet</span><nav aria-label="Footer navigation"><a href="privacy.html">Privacy Policy</a><a href="support.html">Support</a><a href="mailto:zachary.farnes@gmail.com">Contact</a></nav></div>
   </footer>
 </body>
