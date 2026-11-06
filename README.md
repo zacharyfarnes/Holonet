@@ -2,7 +2,9 @@
   <img src="assets/holonet-icon.png" alt="Holonet app icon" width="128" height="128">
 </p>
 
-<h1 align="center">Holonet</h1>
+<h1 align="center">Holonet: Aurebesh for Safari</h1>
+
+Make daily browsing galactic.
 
 Holonet is a Safari Web Extension that displays webpage text in Aurebesh on iPhone, iPad, and Mac. It changes the page's typeface without rewriting its words, and you can switch back to the original appearance at any time.
 
@@ -14,11 +16,13 @@ Holonet is a Safari Web Extension that displays webpage text in Aurebesh on iPho
 
 ## Features
 
-- Works in Safari on iPhone, iPad, and Mac.
+- Works in Safari on iPhone, including iPhone Duo, iPad, and Mac.
 - Includes Standard and Digraphs reading modes.
 - Uses fonts bundled with the app.
 - Keeps settings on your device.
 - Collects no browsing history, webpage content, or personal data.
+- Opens Safari extension settings directly on iOS and iPadOS 26.2 or later.
+- Offers optional email drafts to report bugs, send feedback, and request features.
 
 ## Requirements
 
@@ -28,6 +32,8 @@ Holonet is a Safari Web Extension that displays webpage text in Aurebesh on iPho
 ## Getting started
 
 After installing Holonet, open the app for platform-specific setup instructions. Enable the extension in Safari's extension settings, grant access only to the websites where you want to use it, then open Holonet from Safari's Page menu or toolbar to choose a reading mode.
+
+On iOS and iPadOS 26.2 or later, tap Open Safari Extension Settings in Holonet to jump to setup. Manual instructions remain available on all supported versions.
 
 ## About this repository
 
